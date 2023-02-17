@@ -1,0 +1,18 @@
+name: Gitudemy
+on: push
+
+jobs:
+  testing:
+    - runs-on: ubuntu-latest
+      steps:
+        - name: Step1_Getting the files into ubuntu server 
+          uses: actions/checkout@v3
+
+        -name: Step2_Def ubunt in gitactions has node .we are insnstalling manually 
+          uses: action/setip-node@v3
+          with:
+            node-version: 18
+        -name: Step3_Install the nmp modules
+          run: |
+            npm ci
+            npm test

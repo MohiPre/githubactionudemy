@@ -17,6 +17,7 @@ jobs:
           npm ci
           npm test
   Deploying:
+    needs: testing
     runs-on: ubuntu-latest
     steps:
       - name: Step1_Getting the files into ubuntu server

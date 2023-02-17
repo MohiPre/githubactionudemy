@@ -3,8 +3,8 @@ on: push
 
 jobs:
   testing:
-    - runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
         - name: Step1_Getting the files into ubuntu server 
           uses: actions/checkout@v3
 
